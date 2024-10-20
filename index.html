@@ -1,1 +1,47 @@
+<stlye>
+   #myButtonx {
+        background-color: #0000FF;
+        color: white;
+        border: 2px solid #fff;
+        padding: 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        font-size: 24px;
+        width: 80%;
+        height: auto;
+        max-width: 500px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        margin-top: 30px; /* Added margin to create space between the title and button */
+      }
+</stlye>
+<button id="myButtonx">Play Now!! (New Massive Update)</button>
+<script>
+   function openNewWindow() {
+        const newWindow = window.open('about:blank', '_blank');
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://phantom-deploy.github.io/infmapig.github.io/selection.html';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.position = 'absolute';
+        iframe.style.top = '0';
+        iframe.style.left = '0';
+        iframe.style.bottom = '0';
+        iframe.style.right = '0';
+        newWindow.document.body.appendChild(iframe);
+      }
 
+      // Auto-launch after page loads
+      window.onload = function() {
+        setTimeout(() => {
+          openNewWindow();
+        }, 0); // Auto-launch after 5 seconds
+      };
+
+      // Button redirection functionality
+      const button = document.querySelector('#myButtonx');
+      button.addEventListener('click', () => {
+        openNewWindow(); // Open window when button is clicked
+      });
+</script>
